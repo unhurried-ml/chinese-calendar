@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.chinesecalendar</groupId>
+    <artifactId>chinese-calendar</artifactId>
+    <version>1.12.1</version>
+    <packaging>jar</packaging>
+
+    <name>chinese-calendar</name>
+    <description>中国节假日/调休/24节气工具库（JDK 1.8）</description>
+    <url>https://github.com/unhurried-ml/chinese-calendar</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>unhurried-ml</name>
+            <url>https://github.com/unhurried-ml</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/unhurried-ml/chinese-calendar</url>
+        <connection>scm:git:https://github.com/unhurried-ml/chinese-calendar.git</connection>
+        <developerConnection>scm:git:git@github.com:unhurried-ml/chinese-calendar.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/unhurried-ml/chinese-calendar/issues</url>
+    </issueManagement>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+            </plugin>
+            <!-- mvn test 时运行自测类 SelfTest（无 JUnit 依赖，直接执行 main） -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>run-selftest</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>com.chinesecalendar.SelfTest</mainClass>
+                            <classpathScope>test</classpathScope>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

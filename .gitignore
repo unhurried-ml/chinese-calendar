@@ -1,0 +1,32 @@
+# ---- Maven ----
+target/
+build/
+
+# ---- IntelliJ IDEA ----
+*.iml
+.idea/
+out/
+
+# ---- Eclipse ----
+.classpath
+.project
+.settings/
+.factorypath
+bin/
+
+# ---- VS Code ----
+.vscode/
+
+# ---- NetBeans ----
+nbproject/
+nbactions.xml
+nb-configuration.xml
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Logs / temp ----
+*.log
+*.tmp

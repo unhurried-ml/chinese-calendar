@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Questions & Discussions
+    url: https://github.com/unhurried-ml/chinese-calendar/discussions
+    about: Ask questions and discuss usage here before opening an issue.
