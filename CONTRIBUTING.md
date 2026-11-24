@@ -10,7 +10,7 @@
 ## 开发流程
 
 1. Fork 并 clone 本仓库
-2. 从 `main` 切出特性分支：`git checkout -b feat/xxx` 或 `fix/xxx`
+2. 从 `master` 切出特性分支：`git checkout -b feat/xxx` 或 `fix/xxx`
 3. 修改代码 / 数据 / 文档
 4. 本地自测通过：`mvn test`（应输出 `All tests passed (462 assertions).`）
 5. 提交 PR，关联相关 Issue，按模板填写说明
